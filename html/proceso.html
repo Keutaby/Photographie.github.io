@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="YOUR_INTEGRITY_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/proceso.css">
+    <title>Proceso</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <div class="logo">
+                <img src="/img/Photographie-logo.png" alt="Photographie Logo">
+            </div>
+    
+            <div class="options">
+                <ul>
+                    <li><a href="/index.html">Menu</a></li>
+                    <li><a href="/html/portafolio.html">Portfolio</a></li>
+                    <li><a href="/html/nosotros.html">About</a></li>
+                    <li><a href="/html/proceso.html">Process</a></li>
+                    <li><a href="/html/contacto.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </menu>
+    
+        <div class="dropdown-menu">
+            <li><a href="/index.html">Menu</a></li>
+                <li><a href="/html/portafolio.html">Portfolio</a></li>
+                <li><a href="/html/nosotros.html">About</a></li>
+                <li><a href="/html/proceso.html">Process</a></li>
+                <li><a href="/html/contacto.html">Contact</a></li>
+        </div>
+    </header>
+
+    <section class="steps">
+        <div class="step">
+            <div class="text">
+                <h2>Step 1: Consultation</h2>
+                <p>Get started by reaching out to me through the contact form, social media, email, or phone. We'll discuss your photography needs, the vision you have for your photos, and how I can bring that to life. This initial conversation is also a great opportunity for us to connect and ensure a fun and enjoyable photoshoot.</p>
+            </div>
+            
+        </div>
+    
+        <div class="step">
+            
+            <div class="text">
+                <h2>Step 2: Booking</h2>
+                <p>Once you've reviewed the detailed outline of services and costs provided after our consultation, you can proceed with booking your photoshoot. I will share my availability, allowing us to choose a date that suits us both. While no initial deposit is required, I kindly request a notification at least two weeks in advance if you need to reschedule. I accept payments via cash or Zelle.</p>
+            </div>
+        </div>
+    
+        <div class="step">
+            <div class="text">
+                <h2>Step 3: Planning & Preparation</h2>
+                <p>In this stage, we'll collaborate to plan all the specifics of your photoshoot. Whether through phone calls, emails, or in person, we'll discuss location options, desired styles, and any other important details. This thorough preparation ensures a smooth and successful photoshoot that perfectly aligns with your vision.</p>
+            </div>
+            
+        </div>
+    
+        <div class="step">
+            
+            <div class="text">
+                <h2>Step 4: Photoshoot</h2>
+                <p>Now for the exciting part – the photoshoot! I'll arrive with all the necessary professional equipment, including lighting, props (if applicable), tripod, camera, and potentially an assistant depending on the complexity of the shoot. Building on our planning, this will be a fun and creative experience where we'll work together to bring your vision to life and capture some truly magical moments.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="text">
+                <h2>Step 5: Editing</h2>
+                <p>Once the photoshoot is complete, I'll move on to the editing process. This includes refining the lighting and adding creative touches that align with your vision. You'll be able to select the photos you love most, and we can discuss any specific color preferences or other adjustments you have in mind, whether in person or through other convenient methods.</p>
+            </div>
+            
+        </div>
+
+        <div class="step">
+            
+            <div class="text">
+                <h2>Step 6: Review & Delivery</h2>
+                <p>The moment you've been waiting for! Your beautifully edited photos will be delivered to your inbox via email for easy download. If you've requested prints, I can mail them to your address or we can arrange a personal delivery. Please take your time to review the final images, and I hope you absolutely love them! Your feedback is always appreciated. Thank you for choosing my photography services!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-box">
+            <div class="contenido-footer">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/html/nosotros.html">About</a></li>
+                    <li><a href="/html/proceso.html">Process</a></li>
+                    <li><a href="/html/portafolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+    
+            <div class="contenido-footer">
+                <a href="/index.html"><img src="/img/Photographie-logo.png" width="300px" alt="Photographie Logo"></a>
+            </div>
+    
+            <div class="contenido-footer">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/people/Photographie/61574293945438/?mibextid=wwXIfr&rdid=WRDiK6gaTfhTrCAW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GaHfs7fCC%2F%3Fmibextid%3DwwXIfr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/photographie_ak/?igsh=MWEzanh4ZGg3aWd3NQ%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <p>&copy; 2025 Photographie . All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        if (toggleBtn && dropDownMenu) { // Important: Check if elements exist
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open');
+                const isOpen = dropDownMenu.classList.contains('open');
+                toggleBtnIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="YOUR_INTEGRITY_HASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <div class="logo">
+                <img src="/img/Photographie-logo.png" alt="Photographie Logo">
+            </div>
+    
+            <div class="options">
+                <ul>
+                    <li><a href="/index.html">Menu</a></li>
+                    <li><a href="/html/portafolio.html">Portfolio</a></li>
+                    <li><a href="/html/nosotros.html">About</a></li>
+                    <li><a href="/html/proceso.html">Process</a></li>
+                    <li><a href="/html/contacto.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </menu>
+    
+        <div class="dropdown-menu">
+            <li><a href="/index.html">Menu</a></li>
+                <li><a href="/html/portafolio.html">Portfolio</a></li>
+                <li><a href="/html/nosotros.html">About</a></li>
+                <li><a href="/html/proceso.html">Process</a></li>
+                <li><a href="/html/contacto.html">Contact</a></li>
+        </div>
+    </header>
+
+    <form action="https://formspree.io/f/mkgrnpaz" method="POST">
+        <h1>Contact Form</h1>
+    <input type="text" name="First" placeholder="First Name" id="" required>
+    <input type="text" name="Last" placeholder="Last Name" id="" required>
+    <input type="email" name="Email" placeholder="Email Address" id="" required>
+    <textarea name="Message" id="" cols="60" rows="5" placeholder="Enter Text" required></textarea>
+    <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        <div class="footer-box">
+            <div class="contenido-footer">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/html/nosotros.html">About</a></li>
+                    <li><a href="/html/proceso.html">Process</a></li>
+                    <li><a href="/html/portafolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+    
+            <div class="contenido-footer">
+                <a href="/index.html"><img src="/img/Photographie-logo.png" width="300px" alt="Photographie Logo"></a>
+            </div>
+    
+            <div class="contenido-footer">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/people/Photographie/61574293945438/?mibextid=wwXIfr&rdid=WRDiK6gaTfhTrCAW&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1GaHfs7fCC%2F%3Fmibextid%3DwwXIfr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/photographie_ak/?igsh=MWEzanh4ZGg3aWd3NQ%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <p>&copy; 2025 Photographie . All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        if (toggleBtn && dropDownMenu) { // Important: Check if elements exist
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open');
+                const isOpen = dropDownMenu.classList.contains('open');
+                toggleBtnIcon.className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+            };
+        }
+    </script>
+</body>
+</html>
