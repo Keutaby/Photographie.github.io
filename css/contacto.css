@@ -142,6 +142,42 @@ button:hover{
     opacity: 80%;
 }
 
+/*-------------------Payment Methods------------------- */
+.payment {
+    width: 90%; /* Or a specific width that suits your layout */
+    max-width: 600px; /* Keep the maximum width */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: block !important; /* Force block display */
+    margin: 20px auto !important; /* Force center the entire block horizontally */
+    text-align: center; /* Center the heading and paragraph text within the block */
+}
+.payment h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.payment p {
+    margin-bottom: 10px;
+}
+.payment ul {
+    list-style: none; /* Remove the bullets */
+    padding: 0; /* Remove default padding of the ul */
+    display: flex; /* Arrange images horizontally */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Vertically align items if needed */
+}
+.payment ul li {
+    margin: 0 10px; /* Add some horizontal spacing between the images */
+}
+.payment ul li img {
+    max-width: 100px; /* Ensure images don't exceed their container */
+    height: auto;
+}
+.payment ul li p{
+    color: gray;
+}
+
 /*-------------------Footer------------------- */
 footer{
     background-color: #eee;

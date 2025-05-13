@@ -118,6 +118,47 @@ h2{
     margin-bottom: 15px;
 }
 
+/* Responsive adjustments for "About Me" section */
+@media (max-width: 768px) {
+    .about,
+    .mission,
+    .vision {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        text-align: center; /* Center text when stacked */
+    }
+
+    .image-box {
+        margin-bottom: 20px; /* Add space between image and text */
+    }
+
+    .image-box,
+    .text-box {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        width: 95%; /* Further adjust width for very small screens */
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller heading on very small screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .image-box,
+    .text-box {
+        padding: 10px;
+    }
+}
+
+
 /*-------------------Footer------------------- */
 footer{
     background-color: #eee;
