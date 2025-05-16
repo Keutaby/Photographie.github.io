@@ -3,13 +3,14 @@
 <head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD7WVHF08N"></script>
+    <!--
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-LD7WVHF08N');
-</script>
+</script> -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -276,6 +277,86 @@
         }
     </script>
 
+    <!-- TEST -->
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptButton = document.getElementById('acceptCookies');
+    const declineButton = document.getElementById('declineCookies');
+    const cookieName = 'cookieConsent';
+    const ga4TrackingId = 'G-LD7WVHF08N'; // Store your GA4 tracking ID
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Function to get a cookie value
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    // Function to load Google Analytics (GA4)
+    function loadGA4() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ga4TrackingId); // Configure GA4 with your ID
+      console.log('Google Analytics (GA4) loaded'); // For testing
+    }
+
+    // Check if consent cookie exists on page load
+    if (getCookie(cookieName) === 'accepted') {
+      // If accepted, load Google Analytics (GA4)
+      loadGA4();
+      // Optionally hide the banner
+      if (cookieBanner) {
+        cookieBanner.style.display = 'none';
+      }
+    } else if (!getCookie(cookieName)) {
+      // If no cookie, show the banner
+      if (cookieBanner) {
+        cookieBanner.style.display = 'block';
+      }
+    }
+
+    // Handle accept button click
+    if (acceptButton) {
+      acceptButton.addEventListener('click', function() {
+        setCookie(cookieName, 'accepted', 30); // Consent for 30 days
+        loadGA4();
+        if (cookieBanner) {
+          cookieBanner.style.display = 'none';
+        }
+      });
+    }
+
+    // Handle decline button click
+    if (declineButton) {
+      declineButton.addEventListener('click', function() {
+        setCookie(cookieName, 'declined', 30); // Remember decline
+        // Do not load Google Analytics
+        if (cookieBanner) {
+          cookieBanner.style.display = 'none';
+        }
+        // Optionally implement logic to remove any GA cookies set previously
+      });
+    }
+  });
+</script>
+
+    <!-- Privacy and Cookies JS -->
+    <!--
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const cookieBanner = document.getElementById('cookieBanner');
@@ -340,7 +421,7 @@
             ga('create', 'YOUR_TRACKING_ID', 'auto'); // Replace 'YOUR_TRACKING_ID'
             ga('send', 'pageview');
             console.log('Google Analytics loaded'); // For testing
-        }
+        }-->
     });
 </script>
 
